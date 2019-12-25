@@ -8,47 +8,43 @@ import java.util.Collections;
 import java.util.List;
 
 public class Task1 {
-
-    public void printAllCaughtException(){
+    public void printAllCaughtException() {
         catchExceptionA();
         catchExceptionB();
         catchNullPointerException();
         catchIOException();
     }
 
-    public void catchExceptionA(){
+    public void catchExceptionA() {
         try {
             throw new ExceptionA();
-        }catch (ExceptionA exception){
+        } catch (ExceptionA exception) {
             exception.printStackTrace();
         }
     }
 
-    public void catchExceptionB(){
+    public void catchExceptionB() {
         try {
             throw new ExceptionB();
-        }catch (ExceptionB exception){
+        } catch (ExceptionB exception) {
             exception.printStackTrace();
         }
     }
 
-    public void catchNullPointerException(){
+    public void catchNullPointerException() {
         try {
             Object object = null;
             object.hashCode();
-        }catch (NullPointerException exception){
+        } catch (NullPointerException exception) {
             exception.printStackTrace();
         }
     }
 
-    public void catchIOException(){
+    public void catchIOException() {
         List<String> lines = Collections.emptyList();
-        try
-        {
+        try {
             lines = Files.readAllLines(Paths.get("fileName"), StandardCharsets.UTF_8);
-        }
-        catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
