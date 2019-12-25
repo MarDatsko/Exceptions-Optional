@@ -7,7 +7,7 @@ public class SafeDivision {
     private int secondNumber;
     Scanner scanner = new Scanner(System.in);
 
-    public void run(){
+    public void runApplication() {
         setFirstNumber();
         setSecondNumber();
         division();
