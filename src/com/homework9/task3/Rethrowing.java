@@ -1,11 +1,11 @@
 package com.homework9.task3;
 
 public class Rethrowing{
-    public void firstMethod() throws Exception {
-        secondMethod();
+    public void rethrowException() throws Exception {
+        throwException();
     }
 
-    private void secondMethod() throws Exception {
+    private void throwException() throws Exception {
         throw new Exception();
     }
 }

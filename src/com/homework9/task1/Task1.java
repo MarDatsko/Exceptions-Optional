@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Collections;
 import java.util.List;
 
 public class Task1 {
@@ -17,16 +16,16 @@ public class Task1 {
 
     public void catchExceptionA() {
         try {
-            throw new ExceptionA();
-        } catch (ExceptionA exception) {
+            throw new NullMoneyException();
+        } catch (NullMoneyException exception) {
             exception.printStackTrace();
         }
     }
 
     public void catchExceptionB() {
         try {
-            throw new ExceptionB();
-        } catch (ExceptionB exception) {
+            throw new NullFoodException();
+        } catch (NullFoodException exception) {
             exception.printStackTrace();
         }
     }
@@ -41,7 +40,7 @@ public class Task1 {
     }
 
     public void catchIOException() {
-        List<String> lines = Collections.emptyList();
+        List<String> lines;
         try {
             lines = Files.readAllLines(Paths.get("fileName"), StandardCharsets.UTF_8);
         } catch (IOException e) {

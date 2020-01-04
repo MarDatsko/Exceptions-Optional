@@ -9,7 +9,7 @@ public class ProgramRunner {
         new Task1().printAllCaughtException();
         new SafeDivision().runApplication();
         try {
-            new Rethrowing().firstMethod();
+            new Rethrowing().rethrowException();
         } catch (Exception e) {
             e.printStackTrace();
         }
