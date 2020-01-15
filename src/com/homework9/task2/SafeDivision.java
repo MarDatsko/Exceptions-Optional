@@ -28,12 +28,10 @@ public class SafeDivision {
     private void setFirstNumber() {
         System.out.println("Please, enter first number - ");
         firstNumber = scanner.nextInt();
-        //firstNumber = new IncomingScanner().getIncomingNumber();
     }
 
     private void setSecondNumber() {
         System.out.println("Please, enter second number - ");
         secondNumber = scanner.nextInt();
-        //secondNumber = new IncomingScanner().getIncomingNumber();
     }
 }
